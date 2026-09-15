@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER AI - Self Aware System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 SUPER AI</h1>
+            <div class="status">
+                <span class="dot" id="statusDot"></span>
+                <span id="statusText">Awake & Learning</span>
+            </div>
+            <div class="stats">
+                <span>Memory: <b id="memoryCount">0</b> patterns</span>
+                <span>Learned: <b id="learnCount">0</b> things</span>
+            </div>
+        </div>
+
+        <div class="chat-area" id="chatArea">
+            <div class="message system">
+                <b>SUPER AI:</b> Kamusta! Ako ang iyong AI na may sariling pag-iisip. 
+                Nauunawaan ko ang sinasabi mo at natututo ako. May access ako sa internet para mag-research.
+                Anong gusto mong malaman?
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Magtanong ka o kausapin mo ako..." autocomplete="off">
+            <button onclick="sendMessage()" id="sendBtn">Send</button>
+            <button onclick="searchWeb()" id="searchBtn" title="Search Web">🔍</button>
+            <button onclick="toggleAutoLearn()" id="learnBtn" title="Auto-Learn ON">🧠</button>
+        </div>
+
+        <div class="thinking" id="thinking" style="display:none;">
+            <span></span><span></span><span></span>
+            <p>Nag-iisip at nag-aanalyze...</p>
+        </div>
+
+        <div class="controls">
+            <button onclick="clearMemory()">🗑️ Clear Memory</button>
+            <button onclick="exportKnowledge()">💾 Export Knowledge</button>
+            <button onclick="showBrain()">🔍 View Brain</button>
+        </div>
+    </div>
+
+    <script src="frontend.js"></script>
+</body>
+</html>
